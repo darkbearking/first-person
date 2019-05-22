@@ -1,0 +1,11 @@
+#如果想要以單機環境啟動多個“警察”服務的話，那麼這裡不需要配置端口號。
+#只需在PoliceServer中從控制台讀入端口號的形式啟動，同時注釋掉“server:   port: 8082”  即可
+server: 
+  port: 8082
+spring:
+  application:
+    name: first-person
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/, http://localhost:8763/eureka/
